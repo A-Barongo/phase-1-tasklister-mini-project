@@ -5,17 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", handleTaskSubmission);
 
   function handleTaskSubmission(event) {
-    event.preventDefault(); // Prevent form from refreshing the page
+    event.preventDefault(); 
     
     const taskInput = document.querySelector("#new-task-description");
     const dueDateInput = document.createElement("input");
     dueDateInput.type = "date";
     
     const taskText = taskInput.value.trim();
-    if (taskText === "") return; // Ignore empty inputs
+    if (taskText === "") return; 
 
     addTaskToList(taskText);
-    taskInput.value = ""; // Clear input field
+    taskInput.value = ""; 
   }
 
   function addTaskToList(taskText) {
